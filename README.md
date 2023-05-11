@@ -21,4 +21,5 @@ If the authorization was successful, the user is returned (displayed) his token.
 4. All - public access
 At this point, authentication takes place. If the token and role are suitable for the selected API, then the user gets access to it.
 
-In this application, I have used Java11, Maven, Spring Boot, Spring Data JPA, MySQL, Spring Security and JWT.
+# In this application, I have used:
+Java11, Maven, Spring Boot, Spring Data JPA, MySQL, Spring Security and JWT.
