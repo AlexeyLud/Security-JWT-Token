@@ -1,0 +1,23 @@
+version: '3'
+services:
+  mysqldb:
+    image: mysql:8.0
+    container_name: my-bd
+    environment:
+      - MYSQL_HOST=localhost
+      - MYSQL_DATABASE=secure
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - 3306:3306
+
+  appservice:
+    container_name: jwt-auth-token-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    depends_on:
+      - mysqldb
